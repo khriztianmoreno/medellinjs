@@ -27,6 +27,44 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
+## Creating a Pull Request
+
+There are 2 main work flows when dealing with pull requests:
+
+1. Pull Request from a [forked repository](https://help.github.com/articles/fork-a-repo)
+2. Pull Request from a branch within a repository
+
+Here we are going to focus on 1.
+
+### Creating a Feature Branch
+
+After making a fork of this repository to your account.
+
+First create a branch with a characteristic name of the work you are going to do, example: `admin-page`, `mobile-version`. Make sure your repository is up to date first using
+
+```bash
+$ git checkout develop
+$ git pull origin develop
+```
+
+*Note:* `git pull` does a `git fetch` followed by a `git merge` to update the local repo with the remote repo. For a more detailed explanation, see [this stackoverflow post](http://stackoverflow.com/questions/292357/whats-the-difference-between-git-pull-and-git-fetch).
+
+To create a branch, use `git checkout -b <new-branch-name> [<base-branch-name>]`, where `base-branch-name` is optional and defaults is current branch `develop`. I'm going to create a new branch called `pull-request-demo` from the `master` branch and push it to github.
+
+```bash
+git checkout -b pull-request-demo
+git push origin pull-request-demo
+```
+
+### Creating a Pull Request
+
+To create a pull request, you must have changes committed to your new branch.
+
+Go to the repository page on github. And click on "Pull Request" button in the repo header.
+
+**Note**: You must do the Pull Request on the `develop` branch.
+
+If you have questions you can see more information in the following link [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
 
 ## External API usage
 
